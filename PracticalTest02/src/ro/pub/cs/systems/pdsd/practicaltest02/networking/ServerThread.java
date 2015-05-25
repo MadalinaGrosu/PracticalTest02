@@ -3,6 +3,7 @@ package ro.pub.cs.systems.pdsd.practicaltest02.networking;
 import java.io.IOException;
 import java.net.ServerSocket;
 import java.net.Socket;
+import java.util.Date;
 import java.util.HashMap;
 
 import org.apache.http.client.ClientProtocolException;
@@ -13,6 +14,7 @@ import android.util.Log;
 public class ServerThread extends Thread {
 	private int          port         = 0;
 	private ServerSocket serverSocket = null;
+	private HashMap<String, Date> clientsData = null;
 
 
 	public ServerThread(int port) {
@@ -25,6 +27,16 @@ public class ServerThread extends Thread {
 				ioException.printStackTrace();
 			}
 		}
+		
+		clientsData = new HashMap<String, Date>();
+	}
+
+	public HashMap<String, Date> getClientsData() {
+		return clientsData;
+	}
+
+	public void setClientsData(HashMap<String, Date> clientsData) {
+		this.clientsData = clientsData;
 	}
 
 	public void setPort(int port) {

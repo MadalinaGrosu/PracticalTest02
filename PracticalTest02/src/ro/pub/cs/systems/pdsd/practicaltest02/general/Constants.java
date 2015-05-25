@@ -5,7 +5,7 @@ public class Constants {
 
 	final public static boolean  DEBUG                       = true;
 
-	final public static String   WEB_SERVICE_ADDRESS         = "http://www.wtimeapi.org/utc/now";
+	final public static String   WEB_SERVICE_ADDRESS         = "http://www.timeapi.org/utc/now";
 
 	final public static String   EMPTY_STRING                = "";
 
